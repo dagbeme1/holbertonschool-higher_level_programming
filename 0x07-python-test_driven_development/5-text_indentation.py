@@ -1,4 +1,11 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
+"""
+Module 5-text_indentation
+Contains method that prints text with 2 new lines after each ".", "?", and ":"
+Takes in a string
+"""
+
+
 def text_indentation(text):
     """
     Prints text with 2 new lines after each ".", "?", and ":"
