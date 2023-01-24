@@ -1,4 +1,11 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
+"""
+Module 4-print_square
+Contains method that prints square with #'s
+Takes in an int size
+"""
+
+
 def print_square(size):
     """
     Prints square with #'s given int size
