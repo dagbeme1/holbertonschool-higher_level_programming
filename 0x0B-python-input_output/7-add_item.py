@@ -1,17 +1,5 @@
 #!/usr/bin/python3
-"""
-Module 7-add_item
-Contains function that adds and saves to Python obj to JSON file; loads objects
-run with ./9-add_item.py
-
-cat add_item.json ; echo ""
-expect output: []
-
-./9-add_item.py some random args
-cat add_item.json ; echo ""
-expect output: ["some", "random", "args"]
-Add all arguments to a Python list and save them to a file.
-"""
+"""Add all arguments to a Python list and save them to a file."""
 import sys
 
 if __name__ == "__main__":
