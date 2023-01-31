@@ -1,22 +1,44 @@
 #!/usr/bin/python3
 """
-This is the Student class
-The Student class defines a student by first & last name, & age.
-This class uses the to_json method which retrieves a dictionary
-representation of a Student instance
+Module 10-student
+Contains class Student
+that initializes public instance attributes first_name, last_name, and age,
+and has public method to_json that returns dictionary representation
+of requested attributes or all if none were requested
 """
 
 
-class Student:
-    """Class that defines a Student"""
+class Student():
+    """
+    Public Attributes:
+        first_name
+        last_name
+        age
+    Public Methods:
+        to_json: retrieves its dictionary representation
+    """
     def __init__(self, first_name, last_name, age):
-        self.age = age
-        self.last_name = last_name
+        """
+        Initializes student with full name and age
+        """
         self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
     def to_json(self, attrs=None):
-        """Returns dict representation of Student"""
-        if attrs:
-            return {k: v for k, v in self.__dict__.items() if k in attrs}
-        else:
+        """
+        Returns dictionary description with simple data structure
+        (list, dictionary, dictionary, string)
+        for JSON serialization of an object
+        Return:
+            Only return dict of attrs given to us
+            Return entire dict if no attrs given
+        """
+        if attrs is None:
             return self.__dict__
+        else:
+            dic = {}
+            for att in attrs:
+                if att in self.__dict__.keys():
+                    dic[att] = self.__dict__[att]
+            return dic
