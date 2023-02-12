@@ -1,4 +1,4 @@
--- script that lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each
+-- script that lists all genres from hbtn_0d_tvshows and displays the number of sho-- ws linked to each
 -- each record should display: tv_genres.name - number_shows
 -- dont display a genre that doesnt have any shows linked
 -- results must be sorted in descending order by the number of shows linked
