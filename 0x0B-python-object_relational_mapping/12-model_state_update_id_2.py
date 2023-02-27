@@ -22,11 +22,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # add new state and commit to table
-    new = State(name="Louisiana")
-    session.add(new)
+    # find and update state (run #7 to see table printed)
+    state = session.query(State).filter_by(id=2).first()
+    state.name = "New Mexico"
+
     session.commit()
-
-    print("{:d}".format(new.id))
-
     session.close()
